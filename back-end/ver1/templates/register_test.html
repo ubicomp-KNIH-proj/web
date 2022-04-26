@@ -1,0 +1,52 @@
+<!-- 회원가입 기능 페이지 -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>KNIH</title>
+        <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <h2>KNIH 설문조사 회원가입</h2>
+        <table>
+            <form name="form" action="/" method="POST">
+                <!-- <thead>
+                    <caption>회원가입</caption>
+                </thead> -->
+                <tbody>
+                    <!-- <tr>
+                        <td>이름</td>
+                        <td><input type="text" name="name"></td>
+                    </tr> -->
+                    <tr>
+                        <td>아이디</td>
+                        <td><input type="text" name="id", placeholder="S<고유번호>"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="pwd", placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 확인</td>
+                        <td><input type="password" name="pwd2", placeholder="Password 확인"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1"><input type="submit" value="가입"></td>
+                    </tr>
+                </tbody>
+            </form>
+        </table>
+        {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            <script type="text/javascript">
+                alert("{{messages[-1]}}")
+            </script>
+            {%endif%}
+        {%endwith%}
+    </body>
+</html>
