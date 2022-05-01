@@ -1,0 +1,103 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>KNIH</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</head>
+<script type="text/javascript">
+
+    function moveCursor(textbox) {
+        if(textbox.value.length == 4) {
+            document.getElementById("pwd").focus();
+        }
+    }
+    </script>
+<body>
+    <style>
+        td,
+        h4 {
+            text-align: center;
+        }
+
+        tbody tr td:first-child {
+            text-align: left;
+        }
+
+        input[type='radio'] {
+            visibility: hidden;
+        }
+
+        input[type='radio']:after {
+            width: 1.5em;
+            height: 1.5em;
+
+            border-radius: 0.75em;
+            background-color: #fff;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid #8d8d8e;
+        }
+
+        input[type='radio']:checked:after {
+
+            background-color: #007bff;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid #8d8d8e;
+
+        }
+    </style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>KNIH 설문조사 로그인</h4>
+            <div class="table-responsive">
+                <form id="s1" name="form" action="/" method="POST">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>아이디</td>
+                                <td><input type="text" name="id", value="S" maxlength="4" onkeyup="moveCursor(this)"></td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td><input type="password" id="pwd" name="pwd", placeholder="Password"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <input type="submit" style="width: 100%;"  value="로그인">
+                </form>
+                <form id="s2" name="form2" action="/register" method="GET">
+                    <input type="submit" style="width: 100%;"  value="회원가입">
+                </form>
+                
+                <!-- <button id="summit" class="btn btn-primary" type="submit" data-title="제출하기" style="width: 100%;"
+                    data-toggle="modal" data-target="#result">회원가입</button> -->
+
+                </div>
+            </div>
+        </div>
+        {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            <script type="text/javascript">
+                alert("{{messages[-1]}}")
+            </script>
+            {%endif%}
+        {%endwith%}
+    
+</body>
+
+</html>
