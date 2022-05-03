@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+
+<html lang="kr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Daily Survey
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #05b7c4;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #24b8cc;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>오늘 하루 어떠셨나요?</h1>
+
+	<!-- Create Form -->
+	<form id="form" action="survey/day" method="post">
+
+		<div class="form-control">
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+                <img src="../static/great.png" width="100" height="110">
+				<input type="radio"
+					id="mood-1" value="1"
+					name="mood">아주 좋아요</input>
+			</label>
+            <hr>
+			<label for="recommed-2">
+                <img src="../static/good.png" width="100" height="100">
+				<input type="radio"
+					id="mood-2" value="2"
+					name="mood">좋아요</input>
+			</label>
+            <hr>
+			<label for="recommed-3">
+                <img src="../static/soso.png" width="100" height="90">
+				<input type="radio"
+					id="mood-3" value="3"
+					name="mood">괜찮아요</input>
+			</label>
+            <hr>
+            <label for="recommed-1">
+                <img src="../static/poor.png" width="100" height="100">
+				<input type="radio"
+					id="mood-4" value="4"
+					name="mood">좀 별로에요</input>
+			</label>
+            <hr>
+            <label for="recommed-1">
+                <img src="../static/bad.png" width="100" height="100">
+				<input type="radio"
+					id="mood-5" value="5"
+					name="mood">나빠요</input>
+			</label>
+            <hr>
+		</div>
+        <input type="file" name="f">
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			제출하기
+		</button>
+	</form>
+</body>
+</html>
+<!DOCTYPE html>
