@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		KNIH
+	</title>
+
+	<style>
+		body {
+			background-color: #c8e0e7;
+			/* background-color: #ffff9f; */
+			font-family: Verdana;
+			text-align: center;
+		}
+		form {
+			background-color: #fff;
+			max-width: 900px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+		button {
+			background-color: #ffffff;
+			border: 4px solid #97bbef;
+			border-radius: 2px;
+			font-family: inherit;
+			color: #97bbef;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>One-Week Survey</h1>
+	<h1>생활습관</h1>
+
+	<form id="form">
+		<div class="form-control">
+			<label for="q1" id="label-q1">
+				1. 지난 1주 동안 하루 평균 수면 시간(낮잠 포함)은 얼마나 되십니까?
+			</label>
+
+			<input type='text' id="phonenum"/>시간
+			<input type='text' id="phonenum1"/>분
+		</div>
+
+		<div class="form-control">
+			<label for="q2" id="label-q2">
+				2. 지난 1주 동안 대략 몇 시에 잠자리에 드셔서 몇 시에 일어나셨습니까? - 잠자리에 드는 시간
+			</label>
+
+			<input type="time" id="input.timepicker"/>
+		</div>
+
+		<div class="form-control">
+			<label for="q3" id="label-q3">
+				3. 지난 1주 동안 대략 몇 시에 잠자리에 드셔서 몇 시에 일어나셨습니까? - 일어나는 시간
+			</label>
+
+			<input type="time" id="input.timepicker"/>
+		</div>
+
+		<div class="form-control">
+			<label for="q4" id="label-q4">
+				4. 현재 귀하는 잠들기가 어렵습니까?
+			</label>
+
+			<label for="q4-1">
+				<input type="radio"
+					id="q4-1"
+					name="q4">아니오</input>
+			</label>
+			<label for="q4-2">
+				<input type="radio"
+					id="q4-2"
+					name="q4">가끔(1-2일/주)</input>
+			</label>
+			<label for="q4-3">
+				<input type="radio"
+					id="q4-3"
+					name="q4">자주(3-4일/주)</input>
+			</label>
+			<label for="q4-4">
+				<input type="radio"
+					id="q4-4"
+					name="q4">거의 매일</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label for="q5" id="label-q5">
+				5. 현재 귀하는 주무시다가 깨시면 다시 잠들기가 어려우십니까?
+			</label>
+
+			<label for="q5-1">
+				<input type="radio"
+					id="q5-1"
+					name="q5">아니오</input>
+			</label>
+			<label for="q5-2">
+				<input type="radio"
+					id="q5-2"
+					name="q5">가끔(1-2일/주)</input>
+			</label>
+			<label for="q5-3">
+				<input type="radio"
+					id="q5-3"
+					name="q5">자주(3-4일/주)</input>
+			</label>
+			<label for="q5-4">
+				<input type="radio"
+					id="q5-4"
+					name="q5">거의 매일</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label for="q6" label="label-q6">
+				6. 몸에 땀이 날 정도의 규칙적인 운동을 한다면 어떤 운동을 하고 계십니까?
+			</label>
+
+			<label for="q6-1">
+				<input type="radio"
+					id="q6-1"
+					name="q6">없음</input>
+			</label>
+			<label for="q6-2">
+				<input type="radio"
+					id="q6-2"
+					name="q6">있음</input>
+			</label>
+			<!-- 세부사항 작성 -->
+		</div>
+
+        <div class="form-control">
+			<label for="q7" label="label-q7">
+				7. 평균적으로 산보/산책(걷기 운동)은 얼마나 하십니까?
+			</label>
+
+			<label for="q7-1">
+				<input type="radio"
+					id="q7-1"
+					name="q7">하지 않음</input>
+			</label>
+			<label for="q7-2">
+				<input type="radio"
+					id="q7-2"
+					name="q7">함
+					<!-- <input type='number' min='10' max='30' step='3'>주 __회 __분</input> -->
+					<!-- <input type='number' min='10' max='30' step='3' placeholder="n회(횟수를 입력하세요)"/> -->
+					<!-- <input type='number' min='10' max='30' step='3' placeholder="n분(시간을 입력하세요)"/> -->
+					<input type='text' id="phonenum"/>번
+					<input type='text' id="phonenum1"/>층
+					
+					<!-- 0회 0분 입력 -->
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="q8" label="label-q8">
+				8. 산책을 제외하고, 일상생활에서 하루에 얼마나 걸으십니까?
+			</label>
+			<input type='text' id="phonenum"/>시간
+			<input type='text' id="phonenum1"/>분
+		</div>
+
+        <div class="form-control">
+			<label for="q9" label="label-q9">
+				9. 일상생활 중 하루에 몇 층을 오르내리십니까?(설명 추가)
+			</label>
+			<input type='text' id="phonenum"/>층
+
+		</div>
+	</form>
+
+
+	<h1>정신건강</h1>
+
+	<!-- Create Form -->
+	<form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="mq1" id="label-mq1">
+				1. 지난 한 주 정신적 또는 육체적으로 감당하기 힘들다고 느낀 적이 있습니까?
+			</label>
+			<label for="mq1-1">
+				<input type="radio"
+					id="mq1-1"
+					name="mq1">없다</input>
+			</label>
+			<label for="mq1-2">
+				<input type="radio"
+					id="mq1-2"
+					name="mq1">가끔 있다</input>
+			</label>
+			<label for="mq1-3">
+				<input type="radio"
+					id="mq1-3"
+					name="mq1">자주 있다</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="mq2" id="label-mq2">
+				2. 지난 한 주 매우 편안하며 건강하다고 느낀다.
+			</label>
+    
+			<label for="mq2-1">
+				<input type="radio"
+					id="mq2-1"
+					name="mq2">항상 그렇다</input>
+			</label>
+			<label for="mq2-2">
+				<input type="radio"
+					id="mq2-2"
+					name="mq2">대부분 그렇다</input>
+			</label>
+			<label for="mq2-3">
+				<input type="radio"
+					id="mq2-3"
+					name="mq2">약간(이따금) 그렇다</input>
+			</label>
+			<label for="mq2-4">
+				<input type="radio"
+					id="mq2-4"
+					name="mq2">전혀 그렇지 않다</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="mq3" id="label-mq3">
+				3. 지난 한 주 잠자고 난 후에도 개운한 감이 없다
+			</label>
+
+			<label for="mq3-1">
+				<input type="radio"
+					id="mq3-1"
+					name="mq3">항상 그렇다</input>
+			</label>
+			<label for="mq3-2">
+				<input type="radio"
+					id="mq3-2"
+					name="mq3">대부분 그렇다</input>
+			</label>
+			<label for="mq3-3">
+				<input type="radio"
+					id="mq3-3"
+					name="mq3">약간(이따금) 그렇다</input>
+			</label>
+			<label for="mq3-4">
+				<input type="radio"
+					id="mq3-4"
+					name="mq3">전혀 그렇지 않다</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="mq4" id="label-mq4">
+				4. 지난 한 주 무슨 일을 하든 정신을 집중하기가 힘들었다
+			</label>
+
+			<label for="mq4-1">
+				<input type="radio"
+					id="mq4-1"
+					name="mq4">항상 그렇다</input>
+			</label>
+			<label for="mq4-2">
+				<input type="radio"
+					id="mq4-2"
+					name="mq4">대부분 그렇다</input>
+			</label>
+			<label for="mq4-3">
+				<input type="radio"
+					id="mq4-3"
+					name="mq4">약간(이따금) 그렇다</input>
+			</label>
+			<label for="mq4-4">
+				<input type="radio"
+					id="mq4-4"
+					name="mq4">전혀 그렇지 않다</input>
+			</label>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<!-- <button type="submit" value="submit">
+			Submit
+		</button> -->
+	</form>
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+	$('#input.timepicker').timepicker({
+            timeFormat: 'HH:mm',
+            interval: 30,
+            startTime: '00:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+});
+</script>
+
+</html>
