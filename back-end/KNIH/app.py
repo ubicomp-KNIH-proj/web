@@ -74,8 +74,6 @@ def day_survey():
     reader.close
     return render_template("login.html")
 
-# @app.route('/survey/onetime', methods = ['POST'])
-# def day_survey():
-#     s1 = request.form["mood"]
-#     print(s1)
-#     return render_template("login.html")
+@app.route('/pop.html', methods=['GET'])
+def window_pop():
+    return render_template("pop.html")
